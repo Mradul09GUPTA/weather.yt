@@ -28,7 +28,7 @@ setInterval(() => {
     timeEl.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
 
     dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
-    const images=hour < 17 ? "url('https://cdn.pixabay.com/photo/2015/02/24/15/41/wolf-647528__480.jpg')" :"url('https://images.unsplash.com/photo-1621274403997-37aace184f49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1')";
+    const images=hour > 17 ? "url('https://cdn.pixabay.com/photo/2015/02/24/15/41/wolf-647528__480.jpg')" :"url('https://images.unsplash.com/photo-1621274403997-37aace184f49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1')";
     
     background.style.background=images;
     background.style.backgroundRepeat="no-repeat";
